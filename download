@@ -1,0 +1,24 @@
+#!/bin/bash
+
+log_file="download_resume_from.log"
+
+if [ -z $1 ]; then
+	if [ ! -f $log_file ]; then
+		echo "No files downloaded earlier!"
+		echo "Example: ~$ download <url>"
+		echo
+		echo "If you have a canceled download earlier then..."
+		echo "Example: ~$ download"
+		echo
+	else
+		while read -r line
+		do
+			echo "Downloading from: $line"
+			curl -L -O -C - $line
+		done < $log_file
+	fi
+else
+	echo $1 > $log_file
+	curl -L -O -C - $1
+fi
+
