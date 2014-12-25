@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# bin log directory name
+bin_logs_name=".bin_logs"
+
+# bin directory location
+bash_dir="$(dirname $0)"
+
+# path to bin log directory
+bin_logs="$bash_dir/$bin_logs_name"
+
+# create bin log directory if not exist
+if [ ! -d $bin_logs ]; then
+	mkdir $bin_logs
+fi
+
+# simplehttpserver log file within bin directory
+simplehttpserver_log="$bin_logs/simplehttpserver.log"
+
+# append provided location to log file
+if [ ! -z $1 ]; then
+	echo $1 > $simplehttpserver_log
+	cd $1
+	python -m SimpleHTTPServer 8080
+else
+	while read -r line
+	do
+		echo "$x: $line"
+		cd $line
+		python -m SimpleHTTPServer 8080
+		break
+	done < $simplehttpserver_log
+fi
+
