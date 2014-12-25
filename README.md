@@ -29,13 +29,13 @@ Tools in bash script for every day requirements.
 
 	It is just for my convienence on OSX.
 
-####### 3. simplehttpserver
+####### 3. server
 
 	Example:
-		~$ simplehttpserver <dir_path>
+		~$ server <dir_path>
 		This will start SimpleHTTPServer is given directory.
 
-		~$ simplehttpserver
+		~$ server
 		Without directory path, it will start SimpleHTTPServer
 		at previously used location.
 
