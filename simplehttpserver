@@ -25,7 +25,6 @@ if [ ! -z $1 ]; then
 else
 	while read -r line
 	do
-		echo "$x: $line"
 		cd $line
 		python -m SimpleHTTPServer 8080
 		break

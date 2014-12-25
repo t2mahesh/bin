@@ -21,10 +21,10 @@ Tools in bash script for every day requirements.
 
 	Example:
 
-		~$ ll
+		~$ ll <dir>
 		It will display ls -lh
 
-		~$ ll a
+		~$ ll -a <dir>
 		It will display ls -lha
 
 	It is just for my convienence on OSX.
