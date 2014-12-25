@@ -15,11 +15,11 @@ if [ ! -d $bin_logs ]; then
 fi
 
 # simplehttpserver log file within bin directory
-simplehttpserver_log="$bin_logs/simplehttpserver.log"
+server_log="$bin_logs/server.log"
 
 # append provided location to log file
 if [ ! -z $1 ]; then
-	echo $1 > $simplehttpserver_log
+	echo $1 > $server_log
 	cd $1
 	open http://localhost:8080/; python -m SimpleHTTPServer 8080
 else
@@ -28,6 +28,6 @@ else
 		cd $line
 		open http://localhost:8080/; python -m SimpleHTTPServer 8080
 		break
-	done < $simplehttpserver_log
+	done < $server_log
 fi
 
