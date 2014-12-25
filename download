@@ -15,7 +15,7 @@ if [ -z $1 ]; then
 		do
 			echo "Downloading from: $line"
 			status=$(curl -w "done" -L -O -C - $line)
-			if [ $status="done" ]; then
+			if [ $status = "done" ]; then
 				rm -r $log_file
 			fi
 		done < $log_file
@@ -23,7 +23,7 @@ if [ -z $1 ]; then
 else
 	echo $1 > $log_file
 	status=$(curl -w "done" -L -O -C - $1)
-	if [ $status="done" ]; then
+	if [ $status = "done" ]; then
 		rm -r $log_file
 	fi
 fi
