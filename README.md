@@ -29,7 +29,7 @@ Tools in bash script for every day requirements.
 
 	It is just for my convienence on OSX.
 
-####### 3. server
+###### 3. server
 
 	Example:
 		~$ server <dir_path>
@@ -38,5 +38,9 @@ Tools in bash script for every day requirements.
 		~$ server
 		Without directory path, it will start SimpleHTTPServer
 		at previously used location.
+
+###### 4. private_bin/
+
+	Save your private productivity scripts inside private_bin/* folder.
 
 
