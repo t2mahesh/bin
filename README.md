@@ -39,6 +39,15 @@ Tools in bash script for every day requirements.
 		Without directory path, it will start SimpleHTTPServer
 		at previously used location.
 
+###### 5. tree
+
+	Example:
+		~$ tree *
+		Prints in tree style excluding hidden files.
+
+		~$ tree .
+		Prints in tree style includig hidden files.
+
 ###### 4. private_bin/
 
 	Save your private productivity scripts inside private_bin/* folder.
