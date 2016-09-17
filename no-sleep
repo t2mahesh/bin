@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "System is not going to sleep until you press Control+C"
+caffeinate -dim

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# El Capitan only.
+sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say finished 
