@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z $1 || -z $2 ]]; then
+  echo "Example:"
+  echo "~$ sync-dir <source> <destination>"
+  echo "<destination> can be i.e. ssh root@x.x.x.x:/root/backup"
+else
+  rsync -vcrdthu $1 $2
+  echo "Done."
+fi

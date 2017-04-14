@@ -48,8 +48,14 @@ Tools in bash script for every day requirements.
 		~$ tree .
 		Prints in tree style includig hidden files.
 
+###### 6. sync-dir
+
+	Example:
+		~$ sync-dir <source-directory> <destination-directory>
+
+	<destination-directory> can be ssh connection.
+	i.e. ssh root@xxx.xxx.xxx.xxx:/root/backup
+
 ###### 4. private_bin/
 
 	Save your private productivity scripts inside private_bin/* folder.
-
-
